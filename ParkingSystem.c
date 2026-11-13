@@ -5,7 +5,6 @@
 #define TRUCK_SUV_RATE 6.0
 #define MAX_FEE 25.0
 
-
 int readNumberInRange(int min, int max)
 {
         int number;
@@ -101,7 +100,8 @@ int main(void)
                                 break;
 
                         case 3:
-                                printDailySumary(totalCustomers, motorcycleCount, sedanCount, coupeCount, truckCount, suvCount, totalCustomers, 1);                                running = 0;
+                                printDailySumary(totalCustomers, motorcycleCount, sedanCount, coupeCount, truckCount, suvCount, totalCustomers, 1);                                
+                                running = 0;
                                 break;
                 }
         }

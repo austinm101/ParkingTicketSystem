@@ -30,6 +30,17 @@ int readNumberInRange(int min, int max)
         }
 }
 
+int getVehicleType(void)
+{
+    printf("===== NEW CUSTOMER =====\n");
+    printf("Select Vehicle Type:\n");
+    printf("1. Motorcycle\n2. Sedan\n3. Coupe\n4. Truck\n5. SUV");
+    
+    printf("Enter your choice: ");
+    
+    return readNumberInRange(1, 5);
+}
+
 void displayMenu(void)
 {
         printf("\n===== PARKING GARAGE FEE SYSTEM =====\n\n");
@@ -92,7 +103,7 @@ int main(void)
                 {
                         case 1:
                                 // TODO: Process a customer and print a receipt
-                                printf("\nCustomer processing is not implemented yet.\n");
+                                getVechicleType();
                                 break;
 
                         case 2:

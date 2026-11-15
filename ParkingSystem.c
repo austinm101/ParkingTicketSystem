@@ -65,6 +65,28 @@ void printDailySumary(int totalCustomers, int motorcycleCount, int sedanCount, i
     }
 }
 
+void printReceipt(int receiptNumber, int vehicleType, int hours, double fee) {
+	
+	printf("===== PARKING RECEIPT =====\n");
+	printf("Receipt Number: %d\n", receiptNumber);
+	printf("Hours Parked: %d\n", hours);
+	switch (vehicleType) {
+		case 1: printf("Vehicle Type: Motorcycle\n"); 
+			printf("Hourly Rate: $%.2f\n", MOTORCYCLE_RATE);
+		case 2: printf("Vehicle Type: Sedan\n");
+			printf("Hourly Rate: $%.2f\n", SEDAN_COUPE_RATE);
+		case 3: printf("Vehicle Type: Coupe\n");
+			printf("Hourly Rate: $%.2f\n", SEDAN_COUPE_RATE);
+		case 4: printf("Vehicle Type: Truck\n");
+			printf("Hourly Rate: $%.2f\n", TRUCK_SUV_RATE);
+		case 5: printf("Vehicle Type: SUV\n");
+			printf("Hourly Rate: $%.2f\n", TRUCK_SUV_RATE);
+	printf("Total Fee: $%.2f\n", fee);
+	printf("===========================\n\n");	
+	}
+	
+}
+
 int main(void)
 {
         int totalCustomers = 0;

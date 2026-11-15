@@ -76,6 +76,12 @@ void printDailySumary(int totalCustomers, int motorcycleCount, int sedanCount, i
     }
 }
 
+int getParkingHours(void)
+{
+    printf("Enter hours parked (1-24): ");
+    return readNumberInRange(1, 24);
+}
+
 int main(void)
 {
         int totalCustomers = 0;
@@ -102,8 +108,8 @@ int main(void)
                 switch (choice)
                 {
                         case 1:
-                                // TODO: Process a customer and print a receipt
                                 getVechicleType();
+                                getParkingHourse();
                                 break;
 
                         case 2:

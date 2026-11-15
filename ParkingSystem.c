@@ -30,6 +30,17 @@ int readNumberInRange(int min, int max)
         }
 }
 
+int getVehicleType(void)
+{
+    printf("===== NEW CUSTOMER =====\n");
+    printf("Select Vehicle Type:\n");
+    printf("1. Motorcycle\n2. Sedan\n3. Coupe\n4. Truck\n5. SUV");
+    
+    printf("Enter your choice: ");
+    
+    return readNumberInRange(1, 5);
+}
+
 void displayMenu(void)
 {
         printf("\n===== PARKING GARAGE FEE SYSTEM =====\n\n");
@@ -73,18 +84,28 @@ void printReceipt(int receiptNumber, int vehicleType, int hours, double fee) {
 	switch (vehicleType) {
 		case 1: printf("Vehicle Type: Motorcycle\n"); 
 			printf("Hourly Rate: $%.2f\n", MOTORCYCLE_RATE);
+      break;
 		case 2: printf("Vehicle Type: Sedan\n");
 			printf("Hourly Rate: $%.2f\n", SEDAN_COUPE_RATE);
+      break;
 		case 3: printf("Vehicle Type: Coupe\n");
 			printf("Hourly Rate: $%.2f\n", SEDAN_COUPE_RATE);
+      break;
 		case 4: printf("Vehicle Type: Truck\n");
 			printf("Hourly Rate: $%.2f\n", TRUCK_SUV_RATE);
+      break;
 		case 5: printf("Vehicle Type: SUV\n");
 			printf("Hourly Rate: $%.2f\n", TRUCK_SUV_RATE);
+      break;
+    }
 	printf("Total Fee: $%.2f\n", fee);
 	printf("===========================\n\n");	
 	}
 	
+int getParkingHours(void)
+{
+    printf("Enter hours parked (1-24): ");
+    return readNumberInRange(1, 24);
 }
 
 int main(void)
@@ -113,8 +134,8 @@ int main(void)
                 switch (choice)
                 {
                         case 1:
-                                // TODO: Process a customer and print a receipt
-                                printf("\nCustomer processing is not implemented yet.\n");
+                                getVechicleType();
+                                getParkingHourse();
                                 break;
 
                         case 2:

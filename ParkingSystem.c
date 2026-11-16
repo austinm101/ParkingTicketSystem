@@ -82,6 +82,36 @@ int getParkingHours(void)
     return readNumberInRange(1, 24);
 }
 
+double getHourlyRate(int vehicleType)
+{
+    switch (vehicleType)
+    {
+        case 1:
+            return 2.00;
+        case 2:
+        case 3:
+            return 4.00;
+        case 4:
+        case 5:
+            return 6.00;
+        default:
+            return 0.00;
+    }
+}
+
+double calculateFee(int vehicleType, int hours)
+{
+    double vehiclePrice = getHourlyRate(vehicleType);
+    
+    double totalFee = vehiclePrice * hours;
+    if(totalFee >= 25.00)
+    {
+        return 25.00;
+    }
+    
+    return totalFee;
+}
+
 int main(void)
 {
         int totalCustomers = 0;
@@ -108,8 +138,8 @@ int main(void)
                 switch (choice)
                 {
                         case 1:
-                                getVechicleType();
-                                getParkingHourse();
+                                getVehicleType();
+                                getParkingHoure();
                                 break;
 
                         case 2:
